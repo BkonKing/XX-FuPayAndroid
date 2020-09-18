@@ -1,0 +1,2 @@
+include ':FuPay'
+include ':app'

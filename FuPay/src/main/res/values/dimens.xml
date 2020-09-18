@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="fuiou_dp1">0.7dp</dimen>
+
+    <dimen name="fuiou_line">@dimen/fuiou_dp1</dimen>
+    <dimen name="fuiou_text_big_size">16dp</dimen>
+    <dimen name="fuiou_text_normal_size">14dp</dimen>
+    <dimen name="fuiou_text_small_size">12dp</dimen>
+    <dimen name="fuiou_button_margin_top">20dp</dimen>
+    <dimen name="fuiou_button_margin">20dp</dimen>
+    <dimen name="fuiou_button_padding">12dp</dimen>
+    <dimen name="fuiou_margin_top">10dp</dimen>
+    <dimen name="fuiou_margin">10dp</dimen>
+    <dimen name="fuiou_padding">8dp</dimen>
+
+    <dimen name="fuiou_quickpay_left_width">100dp</dimen>
+
+</resources>

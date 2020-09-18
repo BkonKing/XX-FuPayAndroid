@@ -1,0 +1,50 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs' // 到libs文件夹下寻找.aar包
+            dirs 'libs', '../library/libs'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:26.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation (name:'fuioupaysdk-v1.2.0-3-release',ext:'aar')
+    //支付宝
+    implementation(name: 'alipaySdk-15.7.3-20200217092932', ext: 'aar')
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:5.5.8'
+    implementation "com.squareup.okhttp3:okhttp:3.12.1"
+    implementation 'com.android.support:multidex:1.0.1'
+    implementation 'com.google.code.gson:gson:2.2.4'
+    //BasePopup主体库
+    implementation "com.github.razerdp:BasePopup:2.2.1"
+    implementation ("com.github.bumptech.glide:glide:4.9.0") {
+        exclude group: "com.android.support"
+    }
+    compileOnly files('../app/libs/apiEngine v1.1.0.jar')
+}

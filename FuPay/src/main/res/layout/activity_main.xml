@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/fuiou_main_white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/selectLl"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:layout_margin="5dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:textSize="14dp"
+            android:id="@+id/selectEnvBtn"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:minWidth="120dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_round_style_bg"
+            android:text="选择环境"
+            android:textColor="@color/fuiou_red_light" />
+        <TextView
+            android:textSize="14dp"
+            android:minWidth="120dp"
+            android:gravity="center"
+            android:id="@+id/selectPayTypeBtn"
+            android:layout_marginLeft="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_round_style_bg"
+            android:text="选择支付方式"
+            android:textColor="@color/fuiou_red_light" />
+    </LinearLayout>
+<ScrollView
+    android:id="@+id/contentSl"
+    android:layout_weight="1"
+    android:background="@color/fuiou_main_white"
+    android:scrollbars="none"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:id="@+id/mchntLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/FuiouLayoutLeft"
+                android:text="商户号" />
+
+            <EditText
+                style="@style/FuiouLayoutRight"
+                android:id="@+id/mchntEt"
+                android:enabled="false"
+                android:text="0002900F0022596" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/orderDateLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/FuiouLayoutLeft"
+                android:text="订单日期" />
+
+            <EditText
+                style="@style/FuiouLayoutRight"
+                android:id="@+id/orderDateEt"
+                android:hint="订单日期，格式YYYYMMDD"
+                tools:text="" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/amtLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/FuiouLayoutLeft"
+                android:text="金额(分)" />
+
+            <EditText
+                style="@style/FuiouLayoutRight"
+                android:id="@+id/amtEt"
+                android:inputType="numberSigned"
+                android:maxLength="9"
+                android:text="1" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/orderIdLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/FuiouLayoutLeft"
+                android:text="商户订单号" />
+
+            <EditText
+                style="@style/FuiouLayoutRight"
+                android:id="@+id/orderIdEt"
+                android:text="" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/nameLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/FuiouLayoutLeft"
+                android:text="商品名称" />
+
+            <EditText
+                style="@style/FuiouLayoutRight"
+                android:id="@+id/nameEt"
+                android:text="test" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detailLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/FuiouLayoutLeft"
+                android:text="商品详情" />
+
+            <EditText
+                style="@style/FuiouLayoutRight"
+                android:id="@+id/detailEt"
+                android:text="testDetail" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/forwardUrlLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/FuiouLayoutLeft"
+                android:text="前台回调地址"
+                />
+
+            <EditText
+                style="@style/FuiouLayoutRight"
+                android:id="@+id/forwardUrlEt"
+                android:text="http://www-2.wg.fuiou.com:13195/pay_test/callback.jsp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/backUrlLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/FuiouLayoutLeft"
+                android:text="后台回调地址"
+                />
+
+            <EditText
+                style="@style/FuiouLayoutRight"
+                android:id="@+id/backUrlEt"
+                android:text="http://www-2.wg.fuiou.com:13195/pay_test/callback.jsp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/moneyTypeLl"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/FuiouLayoutLeft"
+                android:text="货币类型"
+                />
+
+            <EditText
+                style="@style/FuiouLayoutRight"
+                android:id="@+id/moneyTypeEt"
+                android:text="CNY" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/orderTmStartLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/FuiouLayoutLeft"
+                android:text="订单起始时间"
+                />
+
+            <EditText
+                style="@style/FuiouLayoutRight"
+                android:id="@+id/orderTmStartEt"
+                android:hint="格式：yyyyMMddHHmmss"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/orderTmEndLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/FuiouLayoutLeft"
+                android:text="订单失效结束时间"
+                />
+
+            <EditText
+                style="@style/FuiouLayoutRight"
+                android:id="@+id/orderTmEndEt"
+                android:hint="格式：yyyyMMddHHmmss"
+                android:text="" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/tokenLl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                style="@style/FuiouLayoutLeft"
+                android:text="token" />
+
+            <EditText
+                android:id="@+id/tokenEt"
+                style="@style/FuiouLayoutRight"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rem2Ll"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/FuiouLayoutLeft"
+                android:text="备注2" />
+
+            <EditText
+                style="@style/FuiouLayoutRight"
+                android:id="@+id/rem2Et"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rem3Ll"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/FuiouLayoutLeft"
+                android:text="备注3" />
+
+            <EditText
+                style="@style/FuiouLayoutRight"
+                android:id="@+id/rem3Et"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/wxAppIdLl"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/FuiouLayoutLeft"
+                android:text="wxAppId" />
+
+            <EditText
+                style="@style/FuiouLayoutRight"
+                android:id="@+id/wxAppIdEt"
+                android:text="" />
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/tradTypeLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/FuiouLayoutLeft"
+                android:text="交易类型" />
+
+            <EditText
+                style="@style/FuiouLayoutRight"
+                android:id="@+id/tradTypeEt"
+                android:hint="请输入交易类型(非必填)"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/contentSl"
+            android:layout_above="@+id/payLl"
+            android:id="@+id/isShowResultLl"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:clickable="false"
+                android:id="@+id/isShowResultRb"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:textSize="14dp"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="是否展示结果页面"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/payLl"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/payBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="支付" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+
+
+</LinearLayout>

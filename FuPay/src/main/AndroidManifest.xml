@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.fuiou.fupay">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:targetApi="n">
+        <activity
+            android:name=".MainActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            </intent-filter>
+        </activity>
+        <!-- 农行，包名类名不可更改 -->
+        <activity
+            android:name="com.fuiou.fupay.abcPay.AbcPayResultActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <!-- 工行，包名类名不可更改 -->
+        <activity
+            android:name="com.fuiou.fupay.icbcPay.PayResultHandler"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 招行 -->
+        <activity
+            android:name="com.fuiou.fupay.cmbPay.CmbPayResultActivity"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!--scheme格式  fuioupay://商户号/序列号 需要与manifests的招商银行data数据保持一致，否则无ß法回调-->
+                <!-- host:商户号    path：序列号，目前为固定值 '/01'   scheme:固定值'fuioupay'-->
+                <data
+                    android:host="0003910F1065110"
+                    android:path="/01"
+                    android:scheme="fuioupay"
+                    tools:ignore="AppLinkUrlError" />
+            </intent-filter>
+        </activity>
+        <!-- 建行 -->
+        <activity
+            android:name="com.ccb.ifpaysdk.activity.ResultActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+
+                <!-- 替换你的THIRDAPPINFO 格式：fuioupay商户号01 -->
+                <action android:name="fuioupay0003910F106511001" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 微信 -->
+        <activity
+            android:name="com.fuiou.fupay.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:taskAffinity="net.sourceforge.simcpux"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    </application>
+
+</manifest>

@@ -1,0 +1,8 @@
+{
+	"modules":[
+		{
+			"name":"FuPay",
+			"class":"com.fuiou.fupay.FuPay"
+		}
+	]
+}

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="20dp"
+    android:background="@color/fuiou_white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:text="选择支付方式"
+        android:textColor="@color/colorPrimary" />
+
+    <ScrollView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/dialog_text_style"
+                    android:id="@+id/allBtn"
+                    android:text="聚合" />
+
+                <TextView
+                    style="@style/dialog_text_style"
+                    android:id="@+id/webBankPayBtn"
+                    android:text="银行卡支付" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/dialog_text_style"
+                    android:id="@+id/installBtn"
+                    android:text="信用卡分期" />
+
+                <TextView
+                    style="@style/dialog_text_style"
+                    android:id="@+id/bocBtn"
+                    android:text="中行" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/dialog_text_style"
+                    android:id="@+id/icbcBtn"
+                    android:text="工行" />
+                <TextView
+                    style="@style/dialog_text_style"
+                    android:id="@+id/abcBtn"
+                    android:text="农行" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/dialog_text_style"
+                    android:id="@+id/cmbBtn"
+                    android:text="招行" />
+                <TextView
+                    style="@style/dialog_text_style"
+                    android:id="@+id/ccbBtn"
+                    android:text="建行" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/dialog_text_style"
+                    android:id="@+id/wxMiniBtn"
+                    android:text="微信小程序" />
+                <TextView
+                    style="@style/dialog_text_style"
+                    android:id="@+id/wxBtn"
+                    android:text="微信" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/dialog_text_style"
+                    android:id="@+id/alipayBtn"
+                    android:text="支付宝" />
+                <TextView
+                    style="@style/dialog_text_style"
+                    android:id="@+id/unionBtn"
+                    android:text="云闪付" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

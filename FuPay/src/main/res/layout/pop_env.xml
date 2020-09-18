@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_margin="20dp"
+    android:background="@color/fuiou_white"
+    android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_horizontal"
+            android:text="选择环境"/>
+        <LinearLayout
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:layout_width="300dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/devBtn"
+                android:textSize="14dp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_round_light_black_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试环境"/>
+
+            <TextView
+                android:id="@+id/uatBtn"
+                android:textSize="14dp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_round_light_black_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="灰度环境"/>
+
+            <TextView
+                android:id="@+id/proBtn"
+                android:textSize="14dp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:background="@drawable/bg_round_light_black_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="生产环境"/>
+        </LinearLayout>
+</LinearLayout>

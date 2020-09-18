@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="blue">#ffccddff</color>
+    <color name="grey">#58616d</color>
+    <color name="lightgrey">#ff888888</color>
+    <color name="fuiou_gray">#ff888888</color>
+    <color name="fuiou_main_gray">#E6E5E5</color>
+    <color name="fuiou_main_white">#F4F0F0</color>
+    <color name="fuiou_main_black">#191818</color>
+    <color name="fuiou_main_black_light">#434242</color>
+</resources>

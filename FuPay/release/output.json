@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.fuiou.fupay",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "properties": [],
+      "versionCode": 3,
+      "versionName": "3",
+      "enabled": true,
+      "outputFile": "fuioupaysdk-v1.2.0-3-release.apk"
+    }
+  ]
+}
