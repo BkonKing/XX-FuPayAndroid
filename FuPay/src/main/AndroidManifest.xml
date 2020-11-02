@@ -42,7 +42,7 @@
                 <!--scheme格式  fuioupay://商户号/序列号 需要与manifests的招商银行data数据保持一致，否则无ß法回调-->
                 <!-- host:商户号    path：序列号，目前为固定值 '/01'   scheme:固定值'fuioupay'-->
                 <data
-                    android:host="0003910F1065110"
+                    android:host="0004910F3585596"
                     android:path="/01"
                     android:scheme="fuioupay"
                     tools:ignore="AppLinkUrlError" />
@@ -57,7 +57,7 @@
             <intent-filter>
 
                 <!-- 替换你的THIRDAPPINFO 格式：fuioupay商户号01 -->
-                <action android:name="fuioupay0003910F106511001" />
+                <action android:name="fuioupay0004910F358559601" />
 
                 <category android:name="android.intent.category.BROWSABLE" />
                 <category android:name="android.intent.category.DEFAULT" />
